@@ -10,30 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 // });
 
 const Home = () => {
-  const ExpandableDiv = () => {
-    const variants = {
-      initial: { scaleX: 1, transition: { duration: 0.5 } },
-      hover: { scaleX: 1.2, transition: { duration: 0.5 } },
-      rest: { scaleX: 0.8, transition: { duration: 0.5 } },
-    };
-
-    return (
-      <motion.div
-        className="grow shrink basis-0"
-        style={{
-          border: "1px solid #000",
-          flex: 1,
-          margin: 10,
-          height: "100px",
-          width: "500px",
-        }}
-        variants={variants}
-        initial="initial"
-        whileHover="hover"
-        whileTap="rest"
-      />
-    );
-  };
+ 
 
   const ContactCard = (
     <>
