@@ -47,9 +47,42 @@ const Home = () => {
     </>
   );
 
+  const title = (content: string[]) => {
+    return (
+      <>
+        {content.map((letter, index) => {
+          return (
+            <h2 key={letter} className="overflow-hidden">
+              <motion.div
+                initial="initial"
+                animate="animate"
+                variants={{
+                  initial: {
+                    y: "200%",
+                  },
+                  animate: {
+                    y: "0%",
+                  },
+                }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.6, -0.05, 0.01, 0.9],
+                  delay: (index + 1) * 0.2,
+                }}
+                className="text"
+              >
+                {letter}
+              </motion.div>
+            </h2>
+          );
+        })}
+      </>
+    );
+  };
+
   return (
-    <main className="flex min-h-screen  bg-[#f74214] flex-col items-center justify-between p-24">
-      {/* <AnimatedCursor
+    <main className="flex min-h-screen bg-gradient-to-r text-[#1e1e1e] from-[#d9d9d9] to-[#d3d3d3] flex-col items-center justify-between p-24">
+      <AnimatedCursor
         color="255,255,255"
         innerSize={8}
         outerSize={70}
@@ -63,13 +96,36 @@ const Home = () => {
           backgroundColor: "#fff",
           mixBlendMode: "exclusion",
         }}
-      /> */}
+      />
       <div className="absolute top-10 left-10 flex gap-2 items-center ">
         <div className="flex duration-300 transition ease-in-out hover:rotate-180">
           <div className="w-4 h-8 rounded-tl-full border-2 rounded-bl-full bg-slate-100"></div>
           <div className="w-4 h-8 rounded-tr-full rounded-br-full bg-gray-400"></div>
         </div>
         <span>Invert Colors</span>
+      </div>
+      {title(["Gaurav", "Bhatt", "Portfolio", "MMXXIII"])}
+      <div className="flex flex-col group gap-2">
+        <div className="group flex gap-2">
+          <div className="">arrow</div>
+          <div>Project Name</div>
+        </div>
+
+        <h2 className="overflow-hidden">
+          <div className="transition-all ease-in-out -translate-y-[100%] duration-700  group-hover:opacity-100 group-hover:translate-y-0 opacity-0">
+            NextJS, Firebase
+          </div>
+        </h2>
+      </div>
+      <div className="flex h-16 items-center -rotate-90 group">
+        <div
+          className={
+            " items-center justify-center font-extrabold flex-1 h-full bg-[#f74214]   w-20 "
+          }
+        />
+        <div className="ml-2  text-[#f74214] flex transition-all duration-500 ease-in-out  group-hover:flex-[50%] ">
+          LINKEDIN
+        </div>
       </div>
       <div className="w-full h-52 group max-w-full flex gap-8">
         {ContactCard}
