@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "MonumentExtended";
+  src: url("./fonts/MonumentExtended-Bold.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,10 +26,34 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: "MonumentExtended", sans-serif;
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.title {
+  -webkit-text-fill-color: #d3d3d3;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(#000000);
+}
+
+.white-text {
+  -webkit-text-fill-color: #d3d3d3;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(#000000);
+}
+
+.project {
+  -webkit-text-fill-color: #d3d3d3;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(#000000);
+}
+
+.project:hover {
+  -webkit-text-fill-color: #000000;
+  -webkit-text-stroke-width: 1px;
 }
