@@ -20,28 +20,28 @@ export const contactCardInfo: ContactCardProps[] = [
 
 export const workInfo: ContactCardProps[] = [
   {
-    title: "Github",
-    subTitle: "Explore my code and contributions",
-    url: "https://github.com/jeebeez",
+    title: "NUMANS",
+    subTitle: "Next.js, Typescript, GraphQL, NestJs, TailwindCSS",
+    url: "https://www.numanshq.com/employer-experience",
   },
   {
-    title: "Linkedin",
-    subTitle: "My professional life",
-    url: "https://www.linkedin.com/in/bhattgauravd/",
+    title: "GB-WHATSAPP",
+    subTitle: "React, Firebase, Styled Components",
+    url: "https://jeebee-whatsapp.netlify.app/",
   },
   {
-    title: "Email",
+    title: "POKÉDEX",
+    subTitle: "React, MobX, TailwindCSS, PokeAPI",
+    url: "https://pokedex-lite.netlify.app/",
+  },
+  {
+    title: "PORTFOLIO",
     subTitle: "Quick way to reach me",
-    url: "mailto:bhattgauravd@gmail.com",
+    url: "#",
   },
   {
-    title: "Email",
-    subTitle: "Quick way to reach me",
-    url: "mailto:bhattgauravd@gmail.com",
-  },
-  {
-    title: "Email",
-    subTitle: "Quick way to reach me",
-    url: "mailto:bhattgauravd@gmail.com",
+    title: "BREAKMYTRIP",
+    subTitle: "React, Firebase, Redux",
+    url: "https://breakmytrip.netlify.app/",
   },
 ];

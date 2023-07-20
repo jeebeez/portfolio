@@ -3,7 +3,7 @@ import { ContactCardProps } from "./ContactCard";
 
 const Work = ({ title, subTitle, url }: ContactCardProps) => {
   return (
-    <Link href={url} className="inline-flex flex-col items-end ml-auto group">
+    <Link href={url} target="_blank" className="inline-flex flex-col items-end ml-auto group">
       <div className="group items-center flex gap-1">
         <h2 className="overflow-hidden flex h-full py-2">
           <div className="transition-all text-7xl mr-4 ease-in-out translate-x-[30%] duration-500  group-hover:opacity-100 group-hover:translate-x-0 opacity-0">
