@@ -56,4 +56,5 @@ body {
 .project:hover {
   -webkit-text-fill-color: #000000;
   -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
 }

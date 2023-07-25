@@ -1,52 +1,41 @@
 "use client";
 
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import AnimatedCursor from "react-animated-cursor";
 import { AnimatePresence, motion } from "framer-motion";
+import { contactCardInfo, workInfo } from "./data/consts";
+import ContactCard from "./components/ContactCard";
+import Work from "./components/Work";
+import ScrollTo from "./components/ScrollTo";
 
 // const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
 //   ssr: false,
 // });
 
 const Home = () => {
- 
-
-  const ContactCard = (
-    <>
-      <div
-        className={
-          "flex items-center justify-center font-extrabold flex-1 h-full bg-[#f74214] border-[#d9cebe] border text-[#d9cebe]  hover:text-[#f74214] hover:bg-[#d7d7d7] transition-all hover:flex-[15%] duration-500 ease-in-out"
-        }
-      >
-        <div className="absolute">LINKEDIN</div>
-      </div>
-    </>
-  );
-
   const title = (content: string[]) => {
     return (
       <>
         {content.map((letter, index) => {
           return (
-            <h2 key={letter} className="overflow-hidden">
+            <h2 key={letter} className={`overflow-hidden`}>
               <motion.div
                 initial="initial"
                 animate="animate"
                 variants={{
                   initial: {
-                    y: "200%",
+                    y: "150%",
                   },
                   animate: {
-                    y: "0%",
+                    y: "10%",
                   },
                 }}
                 transition={{
-                  duration: 0.8,
+                  duration: 1,
                   ease: [0.6, -0.05, 0.01, 0.9],
-                  delay: (index + 1) * 0.2,
+                  delay: (index + 1) * 0.3,
                 }}
-                className="text"
+                className={`text-9xl title`}
               >
                 {letter}
               </motion.div>
@@ -58,56 +47,144 @@ const Home = () => {
   };
 
   return (
-    <main className="flex min-h-screen bg-gradient-to-r text-[#1e1e1e] from-[#d9d9d9] to-[#d3d3d3] flex-col items-center justify-between p-24">
+    <main className="flex font-monument text-zinc-600 bg-gradient-to-r from-[#d9d9d9] to-[#d3d3d3] flex-col items-center justify-between">
       <AnimatedCursor
-        color="255,255,255"
         innerSize={8}
-        outerSize={70}
+        outerSize={50}
         innerScale={1}
         outerScale={2}
-        outerAlpha={1}
+        outerAlpha={0}
         outerStyle={{
           mixBlendMode: "exclusion",
+          border: "3px",
+          //   opacity: 0.9,
+          backgroundColor: "#ffffff",
+          borderBlock: "3px",
+          borderColor: "#000fff",
+          //   backgroundColor: "rgba(0, 0, 0, 0.1)",
         }}
         innerStyle={{
-          backgroundColor: "#fff",
-          mixBlendMode: "exclusion",
+          backgroundColor: "#ffffff",
         }}
       />
-      <div className="absolute top-10 left-10 flex gap-2 items-center ">
-        <div className="flex duration-300 transition ease-in-out hover:rotate-180">
-          <div className="w-4 h-8 rounded-tl-full border-2 rounded-bl-full bg-slate-100"></div>
-          <div className="w-4 h-8 rounded-tr-full rounded-br-full bg-gray-400"></div>
+      <div className="min-h-screen w-full px-14 relative" id="home">
+        <button className="absolute z-50 animate-spin-slow top-14 left-14">
+          <Image
+            src="/clickHere.svg"
+            alt="Vercel Logo"
+            className=""
+            width={100}
+            height={100}
+            priority
+          />
+        </button>
+
+        <div className="z-50 absolute -rotate-90 bottom-32 left-0">
+          <ScrollTo text="WHO AM I ?" href="about" />
         </div>
-        <span>Invert Colors</span>
-      </div>
-      {title(["Gaurav", "Bhatt", "Portfolio", "MMXXIII"])}
-      <div className="flex flex-col group gap-2">
-        <div className="group flex gap-2">
-          <div className="">arrow</div>
-          <div>Project Name</div>
+        <div className="w-full py-14 ">
+          <Image
+            src="/jeebee.png"
+            alt="JeeBee Logo"
+            className="ml-auto"
+            width={80}
+            height={80}
+            priority
+          />
         </div>
 
-        <h2 className="overflow-hidden">
-          <div className="transition-all ease-in-out -translate-y-[100%] duration-700  group-hover:opacity-100 group-hover:translate-y-0 opacity-0">
-            NextJS, Firebase
-          </div>
-        </h2>
-      </div>
-      <div className="flex h-16 items-center -rotate-90 group">
-        <div
-          className={
-            " items-center justify-center font-extrabold flex-1 h-full bg-[#f74214]   w-20 "
-          }
-        />
-        <div className="ml-2  text-[#f74214] flex transition-all duration-500 ease-in-out  group-hover:flex-[50%] ">
-          LINKEDIN
+        <div className="absolute bottom-14 right-14 flex w-full mt-16 flex-col items-end">
+          {title(["Gaurav", "Bhatt", "Portfolio", "MMXXIII"])}
         </div>
       </div>
-      <div className="w-full h-52 group max-w-full flex gap-8">
-        {ContactCard}
-        {ContactCard}
-        {ContactCard}
+      {/* <div className="min-h-screen w-full relative"> */}
+
+      {/* <p className="absolute top-[20%] left-[20%]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          <br />
+          voluptatum, quibusdam, quia, quos voluptates voluptate quod
+          <br />
+          voluptatibus quas quibusdam, quia, quos voluptates voluptate quod
+          <br />
+          voluptatibus quas quibusdam, quia, quos voluptates voluptate quod
+        </p>
+        <p className="white-text md:max-w-[40%] absolute bottom-[40%] right-[20%]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          <br />
+          voluptatum, quibusdam, quia, quos voluptates voluptate quod
+          <br />
+          voluptatibus quas quibusdam, quia, quos voluptates voluptate quod
+          <br />
+          voluptatibus quas quibusdam, quia, quos voluptates voluptate quod
+        </p>
+        <div className="flex items-center absolute bottom-[10%] left-[10%] justify-center">
+          <Image
+            src="/photo.jpg"
+            alt="That's me"
+            className=""
+            width={300}
+            height={500}
+            priority
+          />
+        </div>
+      </div> */}
+      <div className="min-h-screen relative px-14 w-full flex" id="about">
+        <div className="my-auto mt-40">
+          <p>
+            I stand at the intersection of making memorable web experiences and
+            shipping them fast. Being highly self-critical, I am also very
+            critical about my work. I deliberate on why I am doing something and
+            what value it will add to the end user.
+          </p>
+          <p className="mt-16">
+            I have an eye for product, especially product-gaps which could help
+            enhance their functionality and user engagement. I like to make
+            jokes whenever possible and am very easy to talk to.
+          </p>
+        </div>
+        <div
+          data-scroll-selection
+          className="min-w-[50%] flex items-center justify-center"
+        >
+          <Image
+            src="/photo.jpg"
+            alt="That's me"
+            data-scroll-speed={"6"}
+            className=""
+            width={300}
+            height={500}
+            priority
+          />
+        </div>
+
+        <div className="z-50 absolute -rotate-90 bottom-32 left-0">
+          <ScrollTo text="WHAT I DO ?" href="work" />
+        </div>
+      </div>
+
+      <div className="min-h-screen px-14 w-full relative" id="work">
+        <div className="w-full my-20 flex flex-col gap-4">
+          {workInfo.map((card) => (
+            <Work key={card.title} {...card} />
+          ))}
+        </div>
+        <div className="z-50 absolute -rotate-90 bottom-32 left-0">
+          <ScrollTo text="LETS TALK ?" href="footer" />
+        </div>
+      </div>
+      <div
+        className="h-[75vh] relative w-full px-14 text-end bg-black"
+        id="footer"
+      >
+        <p className="mt-20 text-6xl text-white ">want to connect ?</p>
+        <div className="mt-20 max-w-full flex  gap-8">
+          {contactCardInfo.map((card) => (
+            <ContactCard key={card.title} {...card} />
+          ))}
+        </div>
+        <span className="text-xs text-white absolute bottom-14 right-14 z-50">
+          Made with ❤️ in Pune
+        </span>
       </div>
       {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
         <ExpandableDiv />
