@@ -25,6 +25,11 @@ export const workInfo: ContactCardProps[] = [
     url: "https://www.numanshq.com/employer-experience",
   },
   {
+    title: "AI PLAYGROUND",
+    subTitle: "OpenAI, React, Tailwind",
+    url: "https://jeebee-playground.vercel.app/",
+  },
+  {
     title: "GB-WHATSAPP",
     subTitle: "React, Firebase, Styled Components",
     url: "https://jeebee-whatsapp.netlify.app/",
@@ -45,3 +50,5 @@ export const workInfo: ContactCardProps[] = [
     url: "https://breakmytrip.netlify.app/",
   },
 ];
+
+export const homeTitle = ["Gaurav", "Bhatt", "Portfolio", "MMXXIII"];
