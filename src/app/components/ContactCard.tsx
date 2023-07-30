@@ -21,13 +21,19 @@ const ContactCard = ({ title, subTitle, url }: ContactCardProps) => {
         </div>
 
         <div className="transition-all flex ease-in-out text-black opacity-0 group-hover:opacity-100 duration-500 flex-col items-start">
-          <div className="text-2xl transition-all ease-in-out group-hover:translate-y-0 duration-500 -translate-y-[50%]">
+          <div className="group-hover:text-2xl text-xl transition-all ease-in-out group-hover:translate-y-0 duration-500 -translate-y-[50%]">
             {title}
           </div>
-          <div className="font-extralight text-start ">{subTitle}</div>
+          <div className="font-extralight text-start transition-all ease-in-out duration-500  group-hover:translate-y-0 -translate-y-[100%] opacity-0 group-hover:opacity-100">
+            {subTitle}
+          </div>
         </div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="translate-y-0 group-hover:-translate-y-[100%] group-hover:opacity-0 duration-500 text-4xl">
+        <div className="absolute transition-all duration-300 ease-in-out top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2">
+          <div
+            className="
+           transition-all ease-in-out duration-500 text-4xl group-hover:text-2xl group-hover:text-black   translate-y-0 group-hover:-translate-y-[100%] group-hover:opacity-0
+"
+          >
             {title}
           </div>
         </div>
