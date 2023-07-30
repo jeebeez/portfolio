@@ -6,9 +6,10 @@ const ScrollTo = ({ text, href }: { text: string; href: string }) => {
 
     return;
   };
+
   return (
     <button
-      className="flex h-16 items-center group"
+      className="hidden h-16 lg:flex items-center group"
       onClick={() => scrollIntoView(href)}
     >
       <div
