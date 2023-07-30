@@ -58,3 +58,9 @@ body {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
 }
+
+.about-me {
+  -webkit-text-fill-color: #d3d3d3;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(#ffffff);
+}
