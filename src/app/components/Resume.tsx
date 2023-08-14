@@ -1,5 +1,6 @@
 const DownloadResume = () => {
-  const url = "https://portfolio2023.s3.amazonaws.com/Resume+2023.pdf";
+  const url =
+    "https://portfolio2023.s3.amazonaws.com/Gaurav+Bhatt+-+Software+Engineer.pdf";
 
   return (
     <a
