@@ -19,7 +19,7 @@ const DownloadResume = () => {
         height={svgSize}
         viewBox="0 0 300 300"
         xmlns="http://www.w3.org/2000/svg"
-        className="scale-75 text-black transition duration-50000"
+        className="scale-75 text-black transition-all duration-[20000ms] hover:scale-[0.72]"
       >
         <path
           id="NBStudio"

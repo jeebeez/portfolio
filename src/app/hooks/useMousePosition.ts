@@ -14,8 +14,6 @@ export const useMousePosition = () => {
       }
     };
 
-    console.log("zaza", { hoverNav });
-
     window.addEventListener("mousemove", handlePosition);
     return () => window.removeEventListener("mousemove", handlePosition);
   }, []);
