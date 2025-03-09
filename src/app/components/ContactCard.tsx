@@ -24,7 +24,7 @@ const ContactCard = ({ title, subTitle, url }: ContactCardProps) => {
           <div className="group-hover:text-xl md:group-hover:text-2xl  text-xl transition-all ease-in-out group-hover:translate-y-0 duration-500 -translate-y-[50%]">
             {title}
           </div>
-          <div className="group-hover:text-sm md:group-hover:text-base font-extralight text-start transition-all ease-in-out duration-500  group-hover:translate-y-0 -translate-y-[100%] opacity-0 group-hover:opacity-100 w-52 md:w-full">
+          <div className="group-hover:text-sm md:group-hover:text-base font-extralight text-start transition-all ease-in-out duration-500  group-hover:translate-y-0 -translate-y-[100%] opacity-0 group-hover:opacity-100 w-52 md:w-full h-10 flex items-center ">
             {subTitle}
           </div>
         </div>

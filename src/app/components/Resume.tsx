@@ -5,7 +5,7 @@ const DownloadResume = () => {
     "https://portfolio2023.s3.amazonaws.com/Gaurav-Bhatt-Software-Engineer.pdf";
   const { width } = useWindowSize();
 
-  const currentYear = new Date().getFullYear();
+  const year = 2025;
   const svgSize = width && width < 768 ? 80 : 100;
 
   return (
@@ -35,7 +35,7 @@ const DownloadResume = () => {
           fontWeight="bold"
         >
           <textPath href="#NBStudio" startOffset="5">
-            Resume   •  {currentYear}  •    
+            Resume   •  {year}  •    
             {/* Click here  •  Click here  •   */}
           </textPath>
         </text>

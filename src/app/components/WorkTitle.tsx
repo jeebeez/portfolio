@@ -19,7 +19,7 @@ const WorkTitle = ({ title, subTitle, url }: ContactCardProps) => {
         </div>
       </div>
       <h2 className="overflow-hidden mb-1">
-        <div className="transition-all text-xs ease-in-out -translate-y-[30%] duration-500  group-hover:opacity-100 group-hover:translate-y-0 opacity-0 max-w-sm text-end h-8">
+        <div className="transition-all text-xs ease-in-out -translate-y-[30%] duration-500  group-hover:opacity-100 group-hover:translate-y-0 opacity-0 w-64 md:max-w-sm text-end h-8">
           {subTitle}
         </div>
       </h2>

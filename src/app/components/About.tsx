@@ -7,7 +7,7 @@ const About = () => {
       className="min-h-screen relative px-4 md:px-14 w-full flex flex-col justify-center items-center md:flex-row"
       id="about"
     >
-      <div className="w-full md:min-w-[50%] flex justify-center h-[50%] mt-20 md:mt-10">
+      <div className="w-full md:min-w-[50%] flex justify-center h-[50%] mt-20 md:mt-0">
         <Image
           src="/photo.webp"
           alt="That's me"
@@ -18,7 +18,7 @@ const About = () => {
           className="max-w-[250px] md:max-w-[300px]"
         />
       </div>
-      <div className="text-lg md:text-2xl mt-10 px-4 md:px-0">
+      <div className="text-lg md:text-2xl mt-10 md:mt-0 px-4 md:px-0">
         <p>
           I stand at the intersection of making memorable web experiences and
           shipping them fast. Being highly self-critical, I am also very

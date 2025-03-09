@@ -11,7 +11,7 @@ const Home = () => {
       <div className="z-50 absolute -rotate-90 bottom-32 left-0 hidden md:block">
         <ScrollTo text="WHO AM I ?" href="about" />
       </div>
-      <div className="w-full py-8 md:py-14">
+      <div className="flex flex-col justify-between h-screen items-end py-8 md:py-14">
         <Image
           src="/jeebee.webp"
           alt="JeeBee Logo"
@@ -20,35 +20,36 @@ const Home = () => {
           height={60}
           priority
         />
-      </div>
-      <div className="absolute bottom-20 right-4 md:right-20 flex w-full flex-col items-end">
-        {homeTitle.map((word, index) => {
-          return (
-            <h2 key={word} className={`overflow-hidden`}>
-              <motion.div
-                initial="initial"
-                animate="animate"
-                variants={{
-                  initial: {
-                    y: "150%",
-                  },
-                  animate: {
-                    y: "10%",
-                  },
-                }}
-                transition={{
-                  duration: 1,
-                  ease: [0.6, -0.05, 0.01, 0.9],
-                  delay: (index + 1) * 0.3,
-                  staggerChildren: 2,
-                }}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl title"
-              >
-                {word}
-              </motion.div>
-            </h2>
-          );
-        })}
+
+        <div className="flex w-full flex-col items-end">
+          {homeTitle.map((word, index) => {
+            return (
+              <h2 key={word} className={`overflow-hidden`}>
+                <motion.div
+                  initial="initial"
+                  animate="animate"
+                  variants={{
+                    initial: {
+                      y: "150%",
+                    },
+                    animate: {
+                      y: "10%",
+                    },
+                  }}
+                  transition={{
+                    duration: 1,
+                    ease: [0.6, -0.05, 0.01, 0.9],
+                    delay: (index + 1) * 0.3,
+                    staggerChildren: 2,
+                  }}
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl title"
+                >
+                  {word}
+                </motion.div>
+              </h2>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

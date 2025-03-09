@@ -4,7 +4,7 @@ import ContactCard from "./ContactCard";
 const Footer = () => {
   return (
     <div
-      className="md:h-[75vh] relative w-full px-10 text-end bg-black flex flex-col justify-center"
+      className="md:h-[75vh] relative w-full px-4 md:px-14 text-end bg-black flex flex-col justify-center"
       id="footer"
     >
       <p className="pt-20 text-3xl md:text-6xl text-white">want to connect ?</p>
