@@ -21,7 +21,7 @@ const Home = () => {
           priority
         />
 
-        <div className="flex w-full flex-col items-end">
+        <div className="flex w-full flex-col items-end pb-10 md:pb-0">
           {homeTitle.map((word, index) => {
             return (
               <h2 key={word} className={`overflow-hidden`}>

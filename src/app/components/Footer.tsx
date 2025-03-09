@@ -7,7 +7,11 @@ const Footer = () => {
       className="md:h-[75vh] relative w-full px-4 md:px-14 text-end bg-black flex flex-col justify-center"
       id="footer"
     >
-      <p className="pt-20 text-3xl md:text-6xl text-white">want to connect ?</p>
+      <div className="flex flex-col items-end">
+        <p className="pt-20 text-3xl w-72 md:w-full md:text-6xl text-white">
+          want to connect ?
+        </p>
+      </div>
       <div className="mt-10 md:mt-20 max-w-full flex flex-col md:flex-row my-10 gap-4 md:gap-8">
         {contactCardInfo.map((card) => (
           <ContactCard key={card.title} {...card} />
