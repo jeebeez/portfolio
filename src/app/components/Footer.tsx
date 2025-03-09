@@ -4,7 +4,7 @@ import ContactCard from "./ContactCard";
 const Footer = () => {
   return (
     <div
-      className="md:h-[75vh] relative w-full px-4 md:px-14 bg-black flex flex-col justify-around"
+      className="md:h-[75vh] relative w-full px-4 md:px-14 py-6 md:py-10 bg-black flex flex-col justify-end"
       id="footer"
     >
       <div className="text-end">
@@ -13,7 +13,7 @@ const Footer = () => {
             want to connect ?
           </p>
         </div>
-        <div className="mt-10 md:mt-20 max-w-full flex flex-col md:flex-row my-10 gap-4 md:gap-8">
+        <div className="mt-10 md:mt-40 mb-10 md:mb-20 max-w-full flex flex-col md:flex-row gap-4 md:gap-8">
           {contactCardInfo.map((card) => (
             <ContactCard key={card.title} {...card} />
           ))}
