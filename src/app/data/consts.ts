@@ -32,12 +32,12 @@ export const workInfo: ContactCardProps[] = [
   {
     title: "AI PLAYGROUND",
     subTitle: "OpenAI, React, Tailwind",
-    url: "https://jeebee-playground.vercel.app/",
+    url: "https://playground.jeebee.dev/",
   },
   {
     title: "POKÉDEX",
     subTitle: "React, MobX, TailwindCSS, PokeAPI",
-    url: "https://pokedex-lite.netlify.app/",
+    url: "https://pokedex.jeebee.dev/",
   },
   {
     title: "PORTFOLIO",
