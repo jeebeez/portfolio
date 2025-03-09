@@ -20,19 +20,19 @@ export const contactCardInfo: ContactCardProps[] = [
 
 export const workInfo: ContactCardProps[] = [
   {
+    title: "MODERNLOOP",
+    subTitle: "React.js, Typescript, GraphQL, Java, MUI",
+    url: "https://www.modernloop.com/",
+  },
+  {
     title: "NUMANS",
     subTitle: "Next.js, Typescript, GraphQL, NestJs, TailwindCSS",
-    url: "https://www.numanshq.com/employer-experience",
+    url: "https://www.linkedin.com/company/numanshq/",
   },
   {
     title: "AI PLAYGROUND",
     subTitle: "OpenAI, React, Tailwind",
     url: "https://jeebee-playground.vercel.app/",
-  },
-  {
-    title: "GB-WHATSAPP",
-    subTitle: "React, Firebase, Styled Components",
-    url: "https://jeebee-whatsapp.netlify.app/",
   },
   {
     title: "POKÉDEX",
@@ -43,11 +43,6 @@ export const workInfo: ContactCardProps[] = [
     title: "PORTFOLIO",
     subTitle: "Quick way to reach me",
     url: "#",
-  },
-  {
-    title: "BREAKMYTRIP",
-    subTitle: "React, Firebase, Redux",
-    url: "https://breakmytrip.netlify.app/",
   },
 ];
 
