@@ -6,7 +6,7 @@ import ScrollTo from "./ScrollTo";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full px-4 md:px-14 relative" id="home">
+    <div className="relative min-h-screen w-full px-4 md:px-14" id="home">
       <DownloadResume />
       <div className="z-50 absolute -rotate-90 bottom-32 left-0 hidden md:block">
         <ScrollTo text="WHO AM I ?" href="about" />
@@ -21,7 +21,7 @@ const Home = () => {
           priority
         />
       </div>
-      <div className="absolute bottom-10 md:bottom-20 right-4 md:right-20 flex w-full flex-col items-end">
+      <div className="absolute bottom-20 right-4 md:right-20 flex w-full flex-col items-end">
         {homeTitle.map((word, index) => {
           return (
             <h2 key={word} className={`overflow-hidden`}>
