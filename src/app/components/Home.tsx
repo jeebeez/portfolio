@@ -13,7 +13,7 @@ const Home = () => {
       </div>
       <div className="w-full py-14 ">
         <Image
-          src="/jeebee.png"
+          src="/jeebee.webp"
           alt="JeeBee Logo"
           className="ml-auto"
           width={80}

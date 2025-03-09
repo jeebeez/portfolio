@@ -1,6 +1,19 @@
+import { useEffect, useState } from "react";
+
 const DownloadResume = () => {
   const url =
-    "https://portfolio2023.s3.amazonaws.com/Gaurav+Bhatt+-+Software+Engineer.pdf";
+    "https://portfolio2023.s3.amazonaws.com/Gaurav-Bhatt-Software-Engineer.pdf";
+
+  const [currentYear, setCurrentYear] = useState<number>(
+    new Date().getFullYear()
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentYear(new Date().getFullYear());
+    }, 1000 * 60); // Update every minute
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <a
@@ -29,7 +42,7 @@ const DownloadResume = () => {
           fontWeight="bold"
         >
           <textPath href="#NBStudio" startOffset="5">
-            Resume   •  2023  •    
+            Resume   •  {currentYear}  •    
             {/* Click here  •  Click here  •   */}
           </textPath>
         </text>

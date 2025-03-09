@@ -6,9 +6,9 @@ const About = () => {
     <div className="min-h-screen relative px-14 w-full flex" id="about">
       <div className="min-w-[50%] flex h-[50%] mt-10 justify-center ">
         <Image
-          src="/photo.jpg"
+          src="/photo.webp"
           alt="That's me"
-          className=""
+          style={{ width: "auto", height: "auto" }}
           width={300}
           height={500}
           priority
