@@ -24,7 +24,7 @@ const Marquee = ({
   );
 
   return (
-    <div className={`relative text-6xl  flex ${className}`}>
+    <div className={`relative text-3xl md:text-6xl flex ${className}`}>
       <div
         className={`py-2 ${
           direction === "linear" ? "animate-marquee" : "animate-reverse-marquee"

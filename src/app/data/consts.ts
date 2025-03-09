@@ -13,7 +13,7 @@ export const contactCardInfo: ContactCardProps[] = [
   },
   {
     title: "Email",
-    subTitle: "Quick way to reach me",
+    subTitle: "Quickest way to reach me",
     url: "mailto:bhattgauravd@gmail.com",
   },
 ];
@@ -41,9 +41,9 @@ export const workInfo: ContactCardProps[] = [
   },
   {
     title: "PORTFOLIO",
-    subTitle: "Quick way to reach me",
+    subTitle: "Quickest way to reach me",
     url: "#",
   },
 ];
 
-export const homeTitle = ["Gaurav", "Bhatt", "Portfolio", "MMXXIII"];
+export const homeTitle = ["Gaurav", "Bhatt", "Portfolio", "MMXXV"];

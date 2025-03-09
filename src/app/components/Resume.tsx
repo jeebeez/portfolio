@@ -1,32 +1,25 @@
-import { useEffect, useState } from "react";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 const DownloadResume = () => {
   const url =
     "https://portfolio2023.s3.amazonaws.com/Gaurav-Bhatt-Software-Engineer.pdf";
+  const { width } = useWindowSize();
 
-  const [currentYear, setCurrentYear] = useState<number>(
-    new Date().getFullYear()
-  );
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentYear(new Date().getFullYear());
-    }, 1000 * 60); // Update every minute
-    return () => clearInterval(interval);
-  }, []);
+  const currentYear = new Date().getFullYear();
+  const svgSize = width && width < 768 ? 80 : 100;
 
   return (
     <a
       href={url}
-      className="absolute z-50 animate-spin-slow top-12 left-12"
+      className="absolute z-50 animate-spin-slow top-4 md:top-9 left-4 md:left-12"
       target="__blank"
     >
       <svg
-        width={100}
-        height={100}
+        width={svgSize}
+        height={svgSize}
         viewBox="0 0 300 300"
         xmlns="http://www.w3.org/2000/svg"
-        className=" scale-75 text-black transition duration-50000 "
+        className="scale-75 text-black transition duration-50000"
       >
         <path
           id="NBStudio"
@@ -50,4 +43,5 @@ const DownloadResume = () => {
     </a>
   );
 };
+
 export default DownloadResume;
